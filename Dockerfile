@@ -1,4 +1,4 @@
-FROM python:3.13-alpine AS builder
+FROM python:3.14.0rc1-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN python -m poetry config virtualenvs.create true \
 
 
 
-FROM python:3.13-alpine
+FROM python:3.14.0rc1-alpine
 
 RUN apk add --no-cache curl \
     && rm -rf /var/cache/apk/*
